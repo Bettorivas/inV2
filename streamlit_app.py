@@ -37,64 +37,59 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
 :root{
-  --bg:#0a0c14; --surface:#141824; --surface2:#1a1f2e; --border:#232a3a;
-  --text:#e8ecf4; --text2:#9aa4b8; --text3:#5d6678;
-  --accent:#6366f1; --accent2:#22d3ee; --green:#34d399; --red:#fb7185; --amber:#fbbf24;
+  --bg:#f5f6f8; --surface:#ffffff; --surface2:#f0f2f5; --border:#e4e7ec;
+  --text:#161a23; --text2:#5b6472; --text3:#98a0ac;
+  --accent:#6366f1; --accent2:#0ea5e9; --green:#10b981; --red:#ef4444; --amber:#f59e0b;
 }
 [data-testid="stAppViewContainer"]{
   background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(99,102,241,.10), transparent 60%),
-    radial-gradient(900px 500px at 0% 0%, rgba(34,211,238,.06), transparent 55%),
-    #0a0c14;
+    radial-gradient(1100px 560px at 85% -12%, rgba(99,102,241,.08), transparent 60%),
+    radial-gradient(800px 460px at -5% 0%, rgba(14,165,233,.06), transparent 55%),
+    #f5f6f8;
 }
 [data-testid="stHeader"]{background:rgba(0,0,0,0);}
-[data-testid="stSidebar"]{background:#0c0f18;border-right:1px solid var(--border);}
-[data-testid="stSidebar"] *{color:var(--text2);}
+[data-testid="stSidebar"]{background:#ffffff;border-right:1px solid var(--border);}
 html,body,[class*="css"]{font-family:'Inter',sans-serif;color:var(--text);}
 h1,h2,h3{font-family:'Space Grotesk',sans-serif;color:var(--text);letter-spacing:-.02em;}
 .block-container{padding-top:2.4rem;max-width:1440px;}
 
-/* Métricas como tarjetas modernas */
 [data-testid="stMetric"]{
-  background:linear-gradient(180deg, var(--surface) 0%, rgba(20,24,36,.6) 100%);
-  border:1px solid var(--border); border-radius:16px; padding:1.1rem 1.3rem;
-  box-shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 8px 24px rgba(0,0,0,.25);
-  transition:border-color .2s;
+  background:#ffffff;border:1px solid var(--border);border-radius:16px;padding:1.1rem 1.3rem;
+  box-shadow:0 1px 3px rgba(16,24,40,.06),0 1px 2px rgba(16,24,40,.04);transition:.2s;
 }
-[data-testid="stMetric"]:hover{border-color:rgba(99,102,241,.4);}
+[data-testid="stMetric"]:hover{border-color:rgba(99,102,241,.45);
+  box-shadow:0 6px 20px rgba(99,102,241,.10);}
 [data-testid="stMetricValue"]{font-family:'Space Grotesk',sans-serif;font-size:1.55rem;
   font-weight:600;color:var(--text);}
-[data-testid="stMetricLabel"]{color:var(--text3);font-size:.78rem;font-weight:500;
+[data-testid="stMetricLabel"]{color:var(--text3);font-size:.78rem;font-weight:600;
   text-transform:uppercase;letter-spacing:.05em;}
 [data-testid="stMetricDelta"]{font-family:'JetBrains Mono',monospace;font-size:.82rem;}
 
-/* Tabs estilo segmented control */
-.stTabs [data-baseweb="tab-list"]{gap:4px;background:var(--surface);
-  border:1px solid var(--border);border-radius:14px;padding:5px;}
+.stTabs [data-baseweb="tab-list"]{gap:4px;background:#eef0f4;border:1px solid var(--border);
+  border-radius:14px;padding:5px;}
 .stTabs [data-baseweb="tab"]{font-size:.9rem;font-weight:600;color:var(--text2);
   padding:9px 18px;border-radius:10px;}
 .stTabs [data-baseweb="tab"]:hover{color:var(--text);}
 .stTabs [aria-selected="true"]{background:var(--accent);color:#fff !important;
-  box-shadow:0 4px 14px rgba(99,102,241,.4);}
+  box-shadow:0 4px 14px rgba(99,102,241,.35);}
 .stTabs [data-baseweb="tab-highlight"]{background:transparent;}
 
-/* Inputs */
 .stTextArea textarea,.stTextInput input,.stNumberInput input{
-  background:var(--surface) !important;border:1px solid var(--border) !important;
+  background:#ffffff !important;border:1px solid var(--border) !important;
   border-radius:10px !important;color:var(--text) !important;
   font-family:'JetBrains Mono',monospace !important;}
 
 .mono{font-family:'JetBrains Mono',monospace;}
-.tag{display:inline-flex;align-items:center;background:rgba(99,102,241,.12);
-  border:1px solid rgba(99,102,241,.3);border-radius:8px;padding:3px 10px;
-  font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#a5b4fc;margin:3px 3px 0 0;}
-.warn{background:linear-gradient(180deg,rgba(251,191,36,.08),rgba(251,191,36,.03));
-  border:1px solid rgba(251,191,36,.25);border-radius:12px;padding:.9rem 1.1rem;
-  font-size:.85rem;color:#fcd34d;line-height:1.55;}
+.tag{display:inline-flex;align-items:center;background:rgba(99,102,241,.10);
+  border:1px solid rgba(99,102,241,.28);border-radius:8px;padding:3px 10px;
+  font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#4f46e5;margin:3px 3px 0 0;}
+.warn{background:linear-gradient(180deg,rgba(245,158,11,.10),rgba(245,158,11,.04));
+  border:1px solid rgba(245,158,11,.3);border-radius:12px;padding:.9rem 1.1rem;
+  font-size:.85rem;color:#b45309;line-height:1.55;}
 .hdr{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--text3);
   text-transform:uppercase;letter-spacing:.12em;margin:.2rem 0 .5rem;display:block;}
 .bigtitle{font-family:'Space Grotesk',sans-serif;font-size:2.4rem;font-weight:700;
-  background:linear-gradient(135deg,#e8ecf4 30%,#a5b4fc 100%);
+  background:linear-gradient(135deg,#161a23 25%,#6366f1 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   margin:0 0 .2rem;letter-spacing:-.03em;}
 .subtitle{color:var(--text2);font-size:.98rem;margin:0 0 1.2rem;}
@@ -105,9 +100,9 @@ hr{border-color:var(--border);}
 
 # Plotly dark template
 PLOT = dict(paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
-            font=dict(family="JetBrains Mono", color="#9aa4b8", size=11))
-GRID = "rgba(255,255,255,.05)"
-ACCENT = "#6366f1"; GREEN = "#34d399"; RED = "#fb7185"; AMBER = "#fbbf24"; PURP = "#a78bfa"
+            font=dict(family="JetBrains Mono", color="#5b6472", size=11))
+GRID = "rgba(16,24,40,.08)"
+ACCENT = "#6366f1"; GREEN = "#10b981"; RED = "#ef4444"; AMBER = "#f59e0b"; PURP = "#8b5cf6"
 
 
 # ------------------------------------------------------------------ Data
@@ -233,29 +228,60 @@ def proyeccion(mu, sigma, anos_lista, n_sims=10000, semilla=11):
 # ================================================================== SIDEBAR
 with st.sidebar:
     st.markdown("### ⚙️ Configuración")
-    tickers_txt = st.text_area(
-        "Universo (un ticker por línea)",
-        "WALMEX.MX\nGMEXICOB.MX\nGFNORTEO.MX\nAMXB.MX\nVOO\nAAPL\nMSFT",
-        height=160, help="BMV con sufijo .MX (WALMEX.MX). EUA sin sufijo (AAPL).")
+    st.markdown("<span class='hdr'>Mis empresas y grupos</span>", unsafe_allow_html=True)
+    st.caption("Escribe tus tickers y asígnales un grupo (sector, país, lo que quieras). "
+               "El botón ➕ agrega filas.")
+    _default = pd.DataFrame({
+        "Ticker": ["WALMEX.MX", "GFNORTEO.MX", "GMEXICOB.MX", "AMXB.MX",
+                   "VOO", "AAPL", "MSFT"],
+        "Grupo": ["Consumo MX", "Banca MX", "Industria MX", "Telecom MX",
+                  "USA Índice", "USA Tech", "USA Tech"],
+    })
+    holdings = st.data_editor(
+        _default, num_rows="dynamic", use_container_width=True, key="holdings",
+        column_config={
+            "Ticker": st.column_config.TextColumn("Ticker", required=True),
+            "Grupo": st.column_config.TextColumn("Grupo", required=True,
+                     help="Etiqueta para agrupar (ej. Banca MX, USA Tech)."),
+        })
+    holdings = holdings.dropna(subset=["Ticker"]).copy()
+    holdings["Ticker"] = holdings["Ticker"].astype(str).str.strip().str.upper()
+    holdings["Grupo"] = (holdings["Grupo"].astype(str).str.strip()
+                         .replace({"": "Sin grupo", "NAN": "Sin grupo"}))
+    holdings = holdings[holdings["Ticker"] != ""]
+    grupos_disp = sorted(holdings["Grupo"].unique())
+    grupos_sel = st.multiselect("Grupos a analizar", grupos_disp, default=grupos_disp,
+                                help="Filtra el dashboard a los grupos que elijas.")
+    st.divider()
     bench = st.text_input("Benchmark", "^MXX", help="^MXX = IPC, ^GSPC = S&P 500")
     anos_hist = st.slider("Años de historia", 2, 15, 7)
     rf = st.number_input("Tasa libre de riesgo anual (%)", 0.0, 25.0, 9.0, 0.5) / 100
-    st.divider()
     h_ml = st.select_slider("Horizonte del modelo ML (meses)", [1, 3, 6, 12], 3)
     st.caption("Proyección de portafolio fija a 1, 3 y 5 años.")
 
-tickers = [t.strip().upper() for t in tickers_txt.splitlines() if t.strip()]
+holdings_f = holdings[holdings["Grupo"].isin(grupos_sel)]
+tickers = holdings_f["Ticker"].drop_duplicates().tolist()
+grupo_de = dict(zip(holdings_f["Ticker"], holdings_f["Grupo"]))
 if len(tickers) < 2:
-    st.info("Ingresa al menos 2 tickers en la barra lateral."); st.stop()
+    st.info("Selecciona al menos 2 empresas (revisa tickers y grupos en la barra lateral).")
+    st.stop()
 
 # ================================================================== HEADER
 st.markdown("<div class='bigtitle'>Quant Dashboard</div>", unsafe_allow_html=True)
 st.markdown("<p class='subtitle'>Análisis · Optimización · Predicción · Riesgo — "
             "datos reales, métricas sin maquillaje.</p>", unsafe_allow_html=True)
-st.markdown("<span class='hdr'>Universo</span>", unsafe_allow_html=True)
-st.markdown(" ".join(f"<span class='tag'>{t}</span>" for t in tickers) +
-            f" <span class='tag' style='color:#d29922'>bench: {bench}</span>",
-            unsafe_allow_html=True)
+st.markdown("<span class='hdr'>Universo por grupo</span>", unsafe_allow_html=True)
+_html = ""
+for _g in grupos_sel:
+    _ts = [t for t in tickers if grupo_de.get(t) == _g]
+    if not _ts:
+        continue
+    _html += (f"<span class='tag' style='background:rgba(14,165,233,.10);"
+              f"border-color:rgba(14,165,233,.30);color:#0369a1;font-weight:600'>{_g}</span> ")
+    _html += " ".join(f"<span class='tag'>{t}</span>" for t in _ts) + "<br>"
+_html += (f"<span class='tag' style='color:#b45309;background:rgba(245,158,11,.10);"
+          f"border-color:rgba(245,158,11,.30)'>bench: {bench}</span>")
+st.markdown(_html, unsafe_allow_html=True)
 
 with st.spinner("Cargando series y calculando..."):
     precios = bajar(tickers, anos_hist)
@@ -296,6 +322,34 @@ with tab1:
                  "Sharpe": "{:.2f}", "Sortino": "{:.2f}", "Max DD %": "{:.1f}",
                  "Beta": "{:.2f}"}).background_gradient(subset=["Sharpe"], cmap="RdYlGn"),
                  use_container_width=True)
+
+    # ---- Métricas agregadas por GRUPO (cartera equiponderada de cada grupo) ----
+    grupos_act = [g for g in grupos_sel if any(grupo_de.get(t) == g for t in validos)]
+    if len(grupos_act) >= 1:
+        st.markdown("<span class='hdr'>Métricas por grupo · cartera equiponderada del grupo</span>",
+                    unsafe_allow_html=True)
+        filas_g = []
+        for g in grupos_act:
+            ts = [t for t in validos if grupo_de.get(t) == g]
+            rg = retornos[ts].mean(axis=1)
+            mg = metricas_serie(rg, rf, bench_ret)
+            filas_g.append([g, len(ts), mg["ret"]*100, mg["vol"]*100, mg["sharpe"], mg["mdd"]*100])
+        dfg = pd.DataFrame(filas_g, columns=["Grupo", "# emp.", "Retorno %", "Vol %",
+                           "Sharpe", "Max DD %"]).set_index("Grupo")
+        gc1, gc2 = st.columns([3, 2])
+        with gc1:
+            st.dataframe(dfg.style.format({"Retorno %": "{:+.1f}", "Vol %": "{:.1f}",
+                         "Sharpe": "{:.2f}", "Max DD %": "{:.1f}"})
+                         .background_gradient(subset=["Sharpe"], cmap="RdYlGn"),
+                         use_container_width=True)
+        with gc2:
+            figg = go.Figure(go.Bar(x=dfg["Retorno %"], y=dfg.index, orientation="h",
+                             marker_color=ACCENT, text=dfg["Retorno %"].round(1),
+                             texttemplate="%{text}%", textposition="outside"))
+            figg.update_layout(height=max(180, 60*len(dfg)), margin=dict(t=6, b=6, l=6, r=20),
+                               **PLOT, xaxis=dict(title="Retorno anual %", gridcolor=GRID),
+                               yaxis=dict(gridcolor=GRID))
+            st.plotly_chart(figg, use_container_width=True)
 
     c1, c2 = st.columns([3, 2])
     with c1:
